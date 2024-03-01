@@ -85,8 +85,8 @@ def main():
     st.markdown("<div class='middle-align'>", unsafe_allow_html=True)
 
     # Prompt user for API key
-    api_key = st.text_input("Enter your API key:")
-    st.session_state.api_key = api_key
+    # api_key = st.text_input("Enter your API key:")
+    # st.session_state.api_key = api_key
 
     pdf_docs = st.file_uploader(
         "Upload your PDFs here and click on 'Upload Document'", accept_multiple_files=True)
