@@ -22,6 +22,7 @@ streamlit run app.py
 ```
 git clone https://github.com/EKarshaSumajK/PDF_AI.git
 ```
+### cd into PDF_AI folder
 ### extract the PDF_AI.zip  
 ### cd into PDF_AI folder
 ### install modules from list of requirements.txt
