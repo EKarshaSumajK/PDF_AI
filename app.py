@@ -9,7 +9,6 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template, heading_template, instruction_template
 from langchain.llms import HuggingFaceHub
-import fitz  # PyMuPDF
 from io import BytesIO
 import pdfplumber
 from PIL import Image
