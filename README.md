@@ -7,7 +7,7 @@ git clone https://github.com/EKarshaSumajK/PDF_AI.git
 ```
 ### change the 'change to env" to .env
 
-### required openapikey inside .env file
+### required openapikey inside .env file [get here](https://platform.openai.com/api-keys).
 ### install modules from list of requirements.txt
 ```
 pip install -r requirements.txt
@@ -29,6 +29,9 @@ git clone https://github.com/EKarshaSumajK/PDF_AI.git
 ```
 pip install -r requirements.txt
 ```
+
+### required openapikey inside .env file [get here](https://platform.openai.com/api-keys).
+
 ### then run this command
 ```
 streamlit run app.py
