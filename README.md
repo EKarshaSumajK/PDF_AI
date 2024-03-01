@@ -1,5 +1,12 @@
-# PDF_AI(imp note: python must be 3.11 version)
+# PDF_AI
+## (imp note: python must be 3.11 version)
+# Method 1:
+### clone this project
+```
+git clone https://github.com/EKarshaSumajK/PDF_AI.git
+```
 ### change the 'change to env" to .env
+
 ### required openapikey inside .env file
 ### install modules from list of requirements.txt
 ```
@@ -10,9 +17,13 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-
-
-# or extract the PDF_AI.zip  
+# Method 2: Recommended 
+### clone this project
+```
+git clone https://github.com/EKarshaSumajK/PDF_AI.git
+```
+### extract the PDF_AI.zip  
+### cd into PDF_AI folder
 ### install modules from list of requirements.txt
 ```
 pip install -r requirements.txt
