@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 
 
-# or extract the PDF_AI.zip file then install modules  
+# or extract the PDF_AI.zip  
 ### install modules from list of requirements.txt
 ```
 pip install -r requirements.txt
