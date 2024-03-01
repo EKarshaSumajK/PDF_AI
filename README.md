@@ -6,4 +6,6 @@ install modules from list of requirements.txt
 
 # or extract the PDF_AI.zip file then install modules  
 ### then run this command
-> streamlit run app.py
+```
+streamlit run app.py
+```
