@@ -1,5 +1,5 @@
 # PDF_AI
-## (imp note: python must be 3.11 version)
+## (imp note: python must be 3.11 version && API KEY REQUIRED)
 # Method 1:
 ### clone this project
 ```
