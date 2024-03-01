@@ -6,7 +6,6 @@
 git clone https://github.com/EKarshaSumajK/PDF_AI.git
 ```
 
-### required openapikey inside .env file [get here](https://platform.openai.com/api-keys).
 ### install modules from list of requirements.txt
 ```
 pip install -r requirements.txt
