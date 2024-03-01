@@ -7,7 +7,7 @@ from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
-from htmlTemplates import css, bot_template, user_template,heading_template,instruction_template
+from htmlTemplates import css, bot_template, user_template, heading_template, instruction_template
 from langchain.llms import HuggingFaceHub
 import fitz  # PyMuPDF
 from io import BytesIO
@@ -76,8 +76,6 @@ def main():
                        page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
 
-    
-
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
     if "chat_history" not in st.session_state:
@@ -85,38 +83,39 @@ def main():
 
     st.write(heading_template, unsafe_allow_html=True)
     st.markdown("<div class='middle-align'>", unsafe_allow_html=True)
-    pdf_docs = st.file_uploader("Upload your PDFs here and click on 'Upload Doument'", accept_multiple_files=True)
+
+    # Prompt user for API key
+    api_key = st.text_input("Enter your API key:")
+    st.session_state.api_key = api_key
+
+    pdf_docs = st.file_uploader(
+        "Upload your PDFs here and click on 'Upload Document'", accept_multiple_files=True)
     st.markdown("</div>", unsafe_allow_html=True)
-     
-     
 
     if st.button("Upload Document"):
         with st.spinner("Processing"):
-        # get pdf text
+            # get pdf text
             raw_text = get_pdf_text(pdf_docs)
 
-        # get the text chunks
+            # get the text chunks
             text_chunks = get_text_chunks(raw_text)
 
-        # create vector store
+            # create vector store
             vectorstore = get_vectorstore(text_chunks)
 
-        # create conversation chain
+            # create conversation chain
             st.session_state.conversation = get_conversation_chain(vectorstore)
-        
-    # Display success message
+
+        # Display success message
         st.success("File Uploaded Successfully!")
-                 
+
     user_question = st.text_input("Ask a question:")
 
     if user_question:
         handle_userinput(user_question)
 
-
-
- 
-
     st.write("</div>", unsafe_allow_html=True)
 
+
 if __name__ == '__main__':
-    main()     
+    main()
