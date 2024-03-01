@@ -5,6 +5,10 @@
 ```
 pip install -r requirements.txt
 ```
+### then run this command
+```
+streamlit run app.py
+```
 
 
 
